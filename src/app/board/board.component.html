@@ -14,7 +14,7 @@
         [height]="screenHeight / 4" 
         width="30%" 
         src="assets/cards/gray_back.png">
-        <!-- {{G.botCards.length}} -->
+        <h3 class="score">{{G.botCards.length}}</h3>
       </ion-row>
   
       <ion-row justify-content-center>
@@ -34,7 +34,7 @@
       </ion-row>
   
       <ion-row justify-content-center>
-        <!-- {{G.playerCards.length}} -->
+        <h3 class="score">{{G.playerCards.length}}</h3>
         <img 
         *ngIf="G.playerCards.length > 0"
         [height]="screenHeight / 4" 

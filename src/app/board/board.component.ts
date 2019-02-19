@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Platform } from '@ionic/angular';
+import { Platform, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-board',
@@ -19,8 +19,12 @@ export class BoardComponent implements OnInit {
 
   screenWidth;
   screenHeight;
+  warToast;
 
-  constructor(private platform: Platform) {
+  constructor(
+    private platform: Platform,
+    private toastController: ToastController
+    ) {
     this.screenHeight = platform.height();
     this.screenWidth = platform.width();
   }
@@ -29,11 +33,23 @@ export class BoardComponent implements OnInit {
     this.moves.newGame();
   }
 
-  onClick() {
+  async onClick() {
     if (!this.G.war) {
       this.moves.play();
     } else {
       this.moves.playWar();
+    }
+
+    if (this.G.war) {
+      debugger
+      this.warToast = await this.toastController.create({
+        message: 'WAR',
+        position: 'middle',
+        translucent: true
+      });
+      this.warToast.present();
+    } else {
+      this.warToast.dismiss();
     }
   }
 }

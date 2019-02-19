@@ -114,6 +114,7 @@ export const MyGame = Game({
           botCards = [...botCards, ...playerField, ...botField];
           war = false;
         } else {
+          debugger
           war = true;
         }
       }
