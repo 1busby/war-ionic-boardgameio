@@ -73,9 +73,8 @@ export const MyGame = Game({
 
       let botCards = [...G.botCards];
       let botField = [...botCards.splice(0,1)];
-      // debugger
+      
       return { ...G, playerCards, playerField, botCards, botField };
-      // return { ...G }
     },
 
     playWar(G, ctx) {
@@ -103,7 +102,6 @@ export const MyGame = Game({
         G.playerField.length > 0 &&
         G.botField.length > 0
         ) {
-        // debugger
         let playerCardRank = playerField[playerField.length - 1].rank;
         let botCardRank = botField[botField.length - 1].rank;
 
