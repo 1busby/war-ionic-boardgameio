@@ -1,0 +1,47 @@
+<div class="board">
+  <ng-container *ngIf="ctx.gameover">
+    <div class="winner">
+      {{ctx.gameover.winner !== undefined ? 'Winner: ' + ctx.gameover.winner : 'Draw???'}}
+    </div>
+  </ng-container>
+  
+  <ion-grid no-padding>
+    <ion-col>
+  
+      <ion-row justify-content-center>
+        <img 
+        *ngIf="G.botCards.length > 0"
+        [height]="screenHeight / 4" 
+        width="30%" 
+        src="assets/cards/gray_back.png">
+        <!-- {{G.botCards.length}} -->
+      </ion-row>
+  
+      <ion-row justify-content-center>
+        <!-- {{G.botField.length}} -->
+        <img 
+        [height]="screenHeight / 4" 
+        width="30%" 
+        [src]="G.botField.length > 0 ? G.botField[G.botField.length - 1].image : 'assets/no_card.png'">
+      </ion-row>
+  
+      <ion-row justify-content-center>
+        <!-- {{G.playerField.length}} -->
+        <img 
+        [height]="screenHeight / 4" 
+        width="30%" 
+        [src]="G.botField.length > 0 ? G.playerField[G.playerField.length - 1].image : 'assets/no_card.png'">
+      </ion-row>
+  
+      <ion-row justify-content-center>
+        <!-- {{G.playerCards.length}} -->
+        <img 
+        *ngIf="G.playerCards.length > 0"
+        [height]="screenHeight / 4" 
+        width="30%" 
+        src="assets/cards/blue_back.png"
+        (click)="onClick()">
+      </ion-row>
+    </ion-col>
+  </ion-grid>
+</div>

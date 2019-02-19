@@ -1,0 +1,14 @@
+.board {
+  background-image:url("../../assets/wood_background.jpg") !important;
+  background-size: auto 100%  !important;
+  background-repeat: no-repeat !important;
+  // background-attachment: fixed  !important;
+  background-position: center bottom !important;
+  // background-color: black !important;
+}
+
+.winner {
+  margin-top: 25px;
+  width: 168px;
+  text-align: center;
+}
