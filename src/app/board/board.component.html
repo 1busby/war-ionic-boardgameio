@@ -9,17 +9,20 @@
     <ion-col>
   
       <ion-row justify-content-center>
+        
         <img 
+        class="animated bounceInDown"
         *ngIf="G.botCards.length > 0"
         [height]="screenHeight / 4" 
         width="30%" 
         src="assets/cards/gray_back.png">
-        <h3 class="score">{{G.botCards.length}}</h3>
+        <h3 class="score-top">{{G.botCards.length}}</h3>
       </ion-row>
   
       <ion-row justify-content-center>
         <!-- {{G.botField.length}} -->
         <img 
+        #card1
         [height]="screenHeight / 4" 
         width="30%" 
         [src]="G.botField.length > 0 ? G.botField[G.botField.length - 1].image : 'assets/no_card.png'">
@@ -27,17 +30,22 @@
   
       <ion-row justify-content-center>
         <!-- {{G.playerField.length}} -->
-        <img 
-        [height]="screenHeight / 4" 
-        width="30%" 
-        [src]="G.botField.length > 0 ? G.playerField[G.playerField.length - 1].image : 'assets/no_card.png'">
+ 
+          <img 
+          #card2
+          [height]="screenHeight / 4" 
+          width="30%" 
+          [src]="G.botField.length > 0 ? G.playerField[G.playerField.length - 1].image : 'assets/no_card.png'">
+
+       
       </ion-row>
   
       <ion-row justify-content-center>
-        <h3 class="score">{{G.playerCards.length}}</h3>
+        <h3 class="score-bottom">{{G.playerCards.length}}</h3>
         <img 
+        class="animated bounceInUp"
         *ngIf="G.playerCards.length > 0"
-        [height]="screenHeight / 4" 
+        [height]="(screenHeight / 4)" 
         width="30%" 
         src="assets/cards/blue_back.png"
         (click)="onClick()">

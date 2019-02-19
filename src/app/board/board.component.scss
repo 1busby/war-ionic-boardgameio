@@ -5,6 +5,7 @@
   // background-attachment: fixed  !important;
   background-position: center bottom !important;
   // background-color: black !important;
+  position: relative !important;
 }
 
 .winner {
@@ -15,4 +16,20 @@
 
 .score {
   color: red;
+}
+
+.score-top {
+  color: #fff;
+  font-size: 40px;
+  padding-top: 50px;
+  padding-left: 10px;
+  margin-right: -50px;
+}
+
+.score-bottom {
+  color: #fff;
+  font-size: 40px;
+  padding-right: 10px;
+  padding-top: 50px;
+  margin-left: -50px;
 }
