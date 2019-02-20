@@ -9,8 +9,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { AnimationService, AnimatesDirective } from 'css-animator';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AnimatesDirective],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -20,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
+    AnimationService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
