@@ -9,13 +9,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { AnimationService, AnimatesDirective } from 'css-animator';
+import { AnimationService } from 'css-animator';
 @NgModule({
-  declarations: [AppComponent, AnimatesDirective],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(), 
+    IonicModule.forRoot(),
     AppRoutingModule
   ],
   providers: [
