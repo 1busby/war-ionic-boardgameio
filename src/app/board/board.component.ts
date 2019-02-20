@@ -73,7 +73,7 @@ export class BoardComponent implements OnInit {
         message: 'WAR',
         position: 'middle',
         translucent: true,
-        color: 'light',
+        color: 'primary',
       });
       this.warToast.present();
     } else {
